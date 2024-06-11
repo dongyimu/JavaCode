@@ -1,0 +1,18 @@
+public enum ResponseCodeEnum {
+    CODE_200 (200,"请求成功"),            // Request succeeded
+    CODE_404 (404,"请求地址不存在"),       // Request address does not exist
+    CODE_600 (600,"请求参数错误"),         // Request parameter error
+    CODE_601 (601,"信息已存在"),           // Information already exists
+    CODE_500 (500,"服务器遇到错误，请联系管理员"); // Server encountered an error, please contact the administrator
+
+    private Integer code;
+    private String msg;
+
+    ResponseCodeEnum(Integer code, String msg) {
+        this.code = code;
+        this.msg = msg;
+    }
+
+    public Integer getCode() { return code; }
+    public String getMsg() { return msg; }
+}

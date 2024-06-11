@@ -1,0 +1,17 @@
+
+public class ABaseController {
+
+    protected static final String STATUS_SUCCESS = "success";
+
+    protected static final String STATUS_ERROR = "error";
+  
+    protected <T> ResponseVO getSuccessResponseVO(T t) {
+        ResponseVO<T> ResponseVO = new ResponseVO<>();
+        ResponseVO.setStatus(STATUS_SUCCESS);
+        ResponseVO.setCode(ResponseCodeEnum.CODE_200.getCode());
+        ResponseVO.setInfo(ResponseCodeEnum.CODE_200.getMsg());
+        ResponseVO.setData(t);
+        return ResponseVO;
+    }
+
+}
